@@ -240,21 +240,21 @@ window.addEventListener("scroll", () => {
 
 // Função para alternar o tema entre Light e Dark Mode
 function toggleTheme() {
-    const body = document.body;
+    const root = document.documentElement;
     const themeBtn = document.getElementById("btn-theme-toggle");
     
     // Adicionar animação temporária para o fade de cores
-    body.classList.add("page-fade");
+    document.body.classList.add("page-fade");
     
     setTimeout(() => {
-        if (body.classList.contains("light-mode")) {
-            body.classList.remove("light-mode");
+        if (root.classList.contains("light-mode")) {
+            root.classList.remove("light-mode");
             themeBtn.textContent = "🌙";
         } else {
-            body.classList.add("light-mode");
+            root.classList.add("light-mode");
             themeBtn.textContent = "☀️";
         }
-        body.classList.remove("page-fade");
+        document.body.classList.remove("page-fade");
     }, 150);
 }
 
