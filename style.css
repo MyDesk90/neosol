@@ -118,6 +118,7 @@ button {
     color: var(--primary);
     background: linear-gradient(135deg, var(--primary), var(--secondary));
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
@@ -244,6 +245,7 @@ button {
     margin-bottom: 1.5rem;
     background: linear-gradient(135deg, var(--text-main) 60%, var(--text-muted));
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
@@ -548,6 +550,7 @@ button {
     color: var(--primary);
     background: linear-gradient(135deg, var(--primary), var(--secondary));
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
     margin-bottom: 0.25rem;
 }
@@ -778,3 +781,90 @@ button {
         gap: 2.5rem;
     }
 }
+
+/* Botão de Alternância de Tema */
+.header-actions-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.theme-toggle-btn {
+    font-size: 1.25rem;
+    padding: 0.5rem;
+    background: var(--bg-card);
+    border: var(--glass-border);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    transition: var(--transition-medium);
+}
+
+.theme-toggle-btn:hover {
+    transform: rotate(15deg) scale(1.1);
+    border-color: var(--primary);
+    box-shadow: 0 0 12px var(--primary-glow);
+}
+
+/* Modificações do Light Mode */
+.light-mode {
+    --bg-dark: hsl(210, 20%, 96%);
+    --bg-card: hsla(210, 20%, 90%, 0.7);
+    --bg-card-hover: hsla(210, 20%, 85%, 0.85);
+    
+    --text-main: hsl(220, 25%, 8%);
+    --text-muted: hsl(220, 15%, 35%);
+    --text-dark: hsl(210, 20%, 96%);
+    
+    --border-color: hsla(220, 25%, 8%, 0.08);
+    --border-hover: hsla(145, 65%, 45%, 0.5);
+    
+    --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.06);
+    --glass-border: 1px solid hsla(0, 0%, 0%, 0.06);
+}
+
+.light-mode .main-header {
+    background-color: hsla(210, 20%, 96%, 0.85);
+    border-bottom: 1px solid hsla(0, 0%, 0%, 0.06);
+}
+
+.light-mode .timeline-line {
+    background: linear-gradient(180deg, var(--primary), var(--secondary));
+}
+
+.light-mode .contact-form input,
+.light-mode .contact-form textarea {
+    background-color: hsla(210, 20%, 98%, 0.8);
+    border: 1px solid hsla(220, 25%, 8%, 0.12);
+    color: var(--text-main);
+}
+
+.light-mode .contact-form input:focus,
+.light-mode .contact-form textarea:focus {
+    background-color: hsl(0, 0%, 100%);
+    border-color: var(--primary);
+}
+
+.light-mode .hero-section {
+    background: radial-gradient(circle at 80% 20%, hsla(145, 65%, 45%, 0.08), transparent 50%),
+                radial-gradient(circle at 10% 80%, hsla(180, 75%, 40%, 0.06), transparent 50%);
+}
+
+.light-mode .hero-overlay {
+    opacity: 0.12;
+}
+
+.light-mode .main-footer {
+    background-color: hsl(210, 20%, 92%);
+    border-top: 1px solid hsla(0, 0%, 0%, 0.06);
+}
+
+.light-mode .footer-bottom {
+    border-top: 1px solid hsla(0, 0%, 0%, 0.06);
+    color: hsla(220, 15%, 35%, 0.6);
+}
+
