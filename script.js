@@ -238,7 +238,7 @@ window.addEventListener("scroll", () => {
     }
 });
 
-// Função para alternar o tema entre Light e Dark Mode
+// Função para alternar o tema entre Dark, Light e Cyber Mode
 function toggleTheme() {
     const root = document.documentElement;
     const themeBtn = document.getElementById("btn-theme-toggle");
@@ -248,9 +248,16 @@ function toggleTheme() {
     
     setTimeout(() => {
         if (root.classList.contains("light-mode")) {
+            // Se estiver em Light -> vai para Cyber
             root.classList.remove("light-mode");
+            root.classList.add("cyber-mode");
+            themeBtn.textContent = "🤖";
+        } else if (root.classList.contains("cyber-mode")) {
+            // Se estiver em Cyber -> vai para Dark
+            root.classList.remove("cyber-mode");
             themeBtn.textContent = "🌙";
         } else {
+            // Se estiver em Dark -> vai para Light
             root.classList.add("light-mode");
             themeBtn.textContent = "☀️";
         }

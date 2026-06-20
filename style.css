@@ -868,3 +868,177 @@ button {
     color: hsla(220, 15%, 35%, 0.6);
 }
 
+/* 🤖 CYBER MODE (Skin Cyberpunk 2077) */
+.cyber-mode {
+    --bg-dark: #020204;
+    --bg-card: rgba(0, 240, 255, 0.04);
+    --bg-card-hover: rgba(252, 238, 10, 0.08);
+    
+    --primary: #fcee0a;                 /* Amarelo Cyberpunk */
+    --primary-glow: rgba(252, 238, 10, 0.5);
+    --secondary: #00f0ff;               /* Ciano Neon */
+    --secondary-glow: rgba(0, 240, 255, 0.5);
+    --accent: #ff0055;                  /* Rosa Shocking Glitch */
+    
+    --text-main: #fcee0a;
+    --text-muted: #00f0ff;
+    --text-dark: #020204;
+    
+    --border-color: rgba(0, 240, 255, 0.4);
+    --border-hover: #fcee0a;
+    
+    --transition-fast: 0.15s steps(3);  /* Efeito de glitch */
+    --transition-medium: 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    
+    --font-heading: 'Share Tech Mono', monospace;
+    --font-body: 'Share Tech Mono', monospace;
+    
+    --glass-shadow: 0 0 20px rgba(0, 240, 255, 0.25);
+    --glass-border: 1.5px solid #00f0ff;
+}
+
+/* Sobrescritas de Estrutura Cyberpunk */
+.cyber-mode body {
+    font-family: var(--font-body);
+    background-color: var(--bg-dark);
+    color: var(--text-muted);
+    text-shadow: 0 0 2px rgba(0, 240, 255, 0.3);
+}
+
+.cyber-mode .main-header {
+    background-color: rgba(2, 2, 4, 0.95);
+    border-bottom: 2px solid var(--primary);
+    box-shadow: 0 0 15px var(--primary-glow);
+}
+
+.cyber-mode .accent-text {
+    color: var(--primary);
+    background: none;
+    -webkit-background-clip: initial;
+    background-clip: initial;
+    -webkit-text-fill-color: initial;
+    text-shadow: 0 0 10px var(--primary-glow);
+}
+
+.cyber-mode .hero-overlay {
+    background-image: url('images/cyber.png') !important;
+    opacity: 0.45;
+    filter: saturate(1.8) contrast(1.1);
+}
+
+.cyber-mode .hero-section {
+    background: radial-gradient(circle at 50% 50%, rgba(252, 238, 10, 0.05), transparent 70%);
+}
+
+.cyber-mode .badge {
+    border-radius: 0;
+    border: 1px solid var(--accent);
+    color: var(--accent);
+    background: rgba(255, 0, 85, 0.08);
+    text-shadow: 0 0 5px rgba(255, 0, 85, 0.5);
+    clip-path: polygon(0 0, 90% 0, 100% 50%, 90% 100%, 0 100%);
+}
+
+/* Cantos Chanfrados Cyberpunk */
+.cyber-mode .btn {
+    border-radius: 0;
+    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%);
+    border: 2px solid var(--primary);
+    background: transparent;
+    color: var(--primary);
+    text-transform: uppercase;
+}
+
+.cyber-mode .btn-primary {
+    background: var(--primary);
+    color: var(--text-dark);
+    font-weight: 800;
+}
+
+.cyber-mode .btn-primary:hover {
+    background: transparent;
+    color: var(--primary);
+    box-shadow: 0 0 15px var(--primary-glow);
+}
+
+.cyber-mode .btn-secondary {
+    border-color: var(--secondary);
+    color: var(--secondary);
+    background: rgba(0, 240, 255, 0.05);
+}
+
+.cyber-mode .btn-secondary:hover {
+    background: var(--secondary);
+    color: var(--text-dark);
+    box-shadow: 0 0 15px var(--secondary-glow);
+}
+
+.cyber-mode .timeline-card,
+.cyber-mode .solution-card,
+.cyber-mode .stat-item,
+.cyber-mode .contact-form {
+    border-radius: 0;
+    border: var(--glass-border);
+    clip-path: polygon(0 0, calc(100% - 20px) 0, 100% 20px, 100% 100%, 20px 100%, 0 calc(100% - 20px));
+    box-shadow: var(--glass-shadow);
+}
+
+.cyber-mode .timeline-badge {
+    border-radius: 0;
+    border: 1px solid var(--secondary);
+    background: var(--bg-dark);
+    color: var(--secondary);
+}
+
+.cyber-mode .active-badge {
+    background: var(--primary) !important;
+    color: var(--text-dark) !important;
+    border-color: var(--primary) !important;
+    box-shadow: 0 0 10px var(--primary-glow);
+}
+
+.cyber-mode .highlighted-card {
+    border: 2px solid var(--primary) !important;
+}
+
+.cyber-mode .stat-number {
+    background: none;
+    -webkit-background-clip: initial;
+    background-clip: initial;
+    -webkit-text-fill-color: initial;
+    color: var(--primary);
+    text-shadow: 0 0 8px var(--primary-glow);
+}
+
+.cyber-mode .contact-form input,
+.cyber-mode .contact-form textarea {
+    border-radius: 0;
+    border: 1px solid var(--secondary);
+    background-color: rgba(2, 2, 4, 0.9);
+    color: var(--primary);
+}
+
+.cyber-mode .contact-form input:focus,
+.cyber-mode .contact-form textarea:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 10px rgba(255, 0, 85, 0.4);
+    outline: none;
+}
+
+.cyber-mode .main-footer {
+    background-color: #010102;
+    border-top: 2px solid var(--accent);
+    box-shadow: 0 -5px 15px rgba(255, 0, 85, 0.15);
+}
+
+.cyber-mode .footer-bottom {
+    border-top: 1px solid rgba(255, 0, 85, 0.15);
+    color: var(--accent);
+}
+
+.cyber-mode .footer-web-link {
+    color: var(--primary);
+    text-shadow: 0 0 5px var(--primary-glow);
+}
+
+
