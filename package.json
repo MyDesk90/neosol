@@ -1,0 +1,12 @@
+{
+  "name": "neosol-landing-page",
+  "version": "1.0.0",
+  "description": "NeoSol / Novas Soluções landing page and visual tests",
+  "main": "index.html",
+  "scripts": {
+    "test:visual": "node test-visual.js"
+  },
+  "devDependencies": {
+    "puppeteer": "^22.0.0"
+  }
+}
